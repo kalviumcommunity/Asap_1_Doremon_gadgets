@@ -8,18 +8,18 @@ Ever wondered about the wacky and wonderful gadgets that Doraemon, the robotic c
 
 ## Features:
 
-Comprehensive Gadget Index: Explore a categorized list of Doraemon's gadgets.
+1. Comprehensive Gadget Index: Explore a categorized list of Doraemon's gadgets.
 
-Detailed Gadget Descriptions: Learn about each gadget's name, appearance, and capabilities.
+2. Detailed Gadget Descriptions: Learn about each gadget's name, appearance, and capabilities.
 
-Search and Filter: Easily find specific gadgets or filter by categories.
+3. Search and Filter: Easily find specific gadgets or filter by categories.
 
-Random Gadget Generator: Discover a new gadget with each visit for added fun.
+4. Random Gadget Generator: Discover a new gadget with each visit for added fun.
 
-User Contributions: Contribute interpretations, anecdotes, and creative ideas for gadget use.
+5. User Contributions: Contribute interpretations, anecdotes, and creative ideas for gadget use.
 
-Gadget Ratings and Reviews: Rate and review gadgets for an interactive experience.
+6. Gadget Ratings and Reviews: Rate and review gadgets for an interactive experience.
 
-Character Profiles: Learn about key characters and their relationships with gadgets.
+7. Character Profiles: Learn about key characters and their relationships with gadgets.
 
-Mobile Responsiveness: Enjoy the catalog on various devices for accessibility.
+8. Mobile Responsiveness: Enjoy the catalog on various devices for accessibility.
