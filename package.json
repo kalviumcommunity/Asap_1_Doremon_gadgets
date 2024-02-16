@@ -1,0 +1,11 @@
+{
+  "name": "asap_1_doremon_gadgets",
+  "version": "1.0.0",
+  "description": "Doraemon's Gadget Catalog\r List of Doremon's (Cartoon character) Gadgets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
