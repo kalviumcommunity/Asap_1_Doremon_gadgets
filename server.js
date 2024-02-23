@@ -7,7 +7,10 @@ const port = process.env.PUBLIC_PORT;
 
 // define the ping route
 app.get("/", (req,res)=>{
-  res.send('Hello, this is the default route page')
+  res.json({
+    message: 'o_O',
+    database: isConnected() ? 'connected' : 'disconnected'
+  });
 })
 app.get("/ping",(req,res)=>{
   res.send('pong')
