@@ -4,17 +4,22 @@ require("dotenv").config();
 const mongoose = require('mongoose')
 const connection = require("./config/dB")
 const port = process.env.PUBLIC_PORT;
+const route = require("./routes")
+
 
 // define the ping route
 app.get("/", (req,res)=>{
   res.json({
     message: 'o_O',
-    database: isConnected() ? 'connected' : 'disconnected'
+    database: connectToDB() ? 'connected' : 'disconnected'
   });
 })
 app.get("/ping",(req,res)=>{
   res.send('pong')
 })
+
+// Using router middleware
+app.use(route);
 
 //connection
 const connectToDB = async ()=>{
@@ -40,10 +45,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = {
-  app,
-  connectToDB,
-  disconnectFromDB,
-  mongooseConnection: mongoose.connection,
-};
-
+module.exports = app
