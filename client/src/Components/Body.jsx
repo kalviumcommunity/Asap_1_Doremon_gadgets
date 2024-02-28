@@ -1,6 +1,7 @@
 import React from "react"
 import "./Body.css"
-
+import friend from "../friends.jpg"
+import bg from "../newBg.png"
 
 function Body() {
   
@@ -8,8 +9,6 @@ function Body() {
 
   // const doremonGif = "./src/doremon.gif"
   // const friends = "./src/frnds.gif"
-  const mates = "./src/friends.jpg"
-  const bg = "./src/newBg.png"
   
   return (
     <>
@@ -17,7 +16,7 @@ function Body() {
       <img className="bgImg" src={bg} alt="" />
       <h1 className="head">DOREMON'S GADGETS!</h1>
       {/* <img className="dora" src={doremonGif} alt="" /> */}
-      <img className="friends" src={mates} alt="" />
+      <img className="friends" src={friend} alt="" />
     </div>
     <div className="display">
     <div className="row1">

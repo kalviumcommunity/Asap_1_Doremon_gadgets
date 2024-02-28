@@ -1,7 +1,6 @@
 import "./Navbar.css"
 import React from 'react'
-
-const nav = "./src/navImg.gif"
+import nav from "../navImg.gif"
 function Navbar() {
     
   return (
@@ -13,7 +12,7 @@ function Navbar() {
         <li>Home</li>
         <li>Gadgets</li>
         <li>Explore</li>
-    </ul>
+    </ul> 
     </div>
     <div className="div2">
   <input type="text" className="searchBar" placeholder="Explore the Gadgets here..."/>
