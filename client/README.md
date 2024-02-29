@@ -9,4 +9,4 @@ Currently, two official plugins are available:
 
 
 # Front-End Landing Page Link: 
-https://sunny-pastelito-3196bc.netlify.app/
+https://asapdoremongadgets.netlify.app/
