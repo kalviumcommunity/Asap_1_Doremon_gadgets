@@ -1,5 +1,22 @@
-const config = {
-  mongoURI: `mongodb+srv://pranjalgosavi_2507:pranjal@cluster0.rnilclc.mongodb.net/DoremonGadgets?retryWrites=true&w=majority&appName=Cluster0`,
-};
 
-module.exports = config;
+let mongoose = require("mongoose")
+require("dotenv").config()
+
+let connected = async() => {
+    try{
+        
+        await mongoose.connect(process.env.uri);
+        console.log("Database connected successfully")
+    }catch(error){
+        console.log(error)
+    }
+}
+const isConnected = () => {
+    return mongoose.connection.readyState === 1;
+}
+
+module.exports = {
+    isConnected,
+    connected
+}
+
