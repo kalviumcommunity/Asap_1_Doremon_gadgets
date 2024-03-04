@@ -3,3 +3,7 @@
     flex-direction: column;
     width: 650px;
 }
+.sub{
+    color: grey;
+    font-weight: 100;
+}

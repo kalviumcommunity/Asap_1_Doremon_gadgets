@@ -14,9 +14,9 @@ function Body() {
 const [data,setData] = useState([])
 
   useEffect(() => {
-    axios.get("https://asap-1-doremon-gadgets.onrender.com/test")
+    axios.get("https://asap-1-doremon-gadgets-1.onrender.com/test")
       .then((res) => {
-        // console.log(res.data)
+        
         setData(res.data)
       });
   }, []);
