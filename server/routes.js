@@ -18,4 +18,4 @@ router.delete("/delete", (req, res) => {
   res.send("It's a delete req");
 });
 
-module.exports = {router};
+module.exports = { router };
