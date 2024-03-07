@@ -6,10 +6,6 @@ router.get("/get", (req, res) => {
   res.send("It's a get req");
 });
 
-router.post("/post", (req, res) => {
-  res.send("It's a post req");
-});
-
 router.patch("/patch", (req, res) => {
   res.send("It's a patch req");
 });

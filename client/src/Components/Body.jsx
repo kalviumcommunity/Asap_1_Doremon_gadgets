@@ -4,33 +4,34 @@ import axios from "axios";
 import friend from "../friends.jpg";
 import bg from "../newBg.png";
 import Card from "./Card";
-import airCannon from "../gadgets/air-cannon.png";
-import anywhereDoor from "../gadgets/Anywhere-Door.png";
-import copyMachine from "../gadgets/Copy-Machine.png";
-import hopter from "../gadgets/Hopter.png";
-import invisibleCape from "../gadgets/Invisible-Cape.png";
+import Navbar from "./Navbar";
 
 function Body() {
-const [data,setData] = useState([])
+  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    axios.get("https://asap-1-doremon-gadgets-1.onrender.com/test")
-      .then((res) => {
-        
-        setData(res.data)
-      });
-  }, []);
-// console.log(data)
+  const Getdata = () => {
+    useEffect(() => {
+      axios
+        .get("https://asap-1-doremon-gadgets-1.onrender.com/test")
+        .then((res) => {
+          setData(res.data);
+        });
+    }, []);
+  };
+
+  Getdata();
+
   return (
     <>
+      <Navbar />
       <div>
         <img className="bgImg" src={bg} alt="" />
         <h1 className="head">DOREMON'S GADGETS!</h1>
         <img className="friends" src={friend} alt="" />
       </div>
       <div className="display">
-        {data.map((ele,i)=>{
-          return <Card key={i} props={ele}/>
+        {data.map((ele, i) => {
+          return <Card key={i} props={ele} />;
         })}
       </div>
     </>

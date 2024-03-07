@@ -1,9 +1,9 @@
-.cards{
-    display: flex;
-    flex-direction: column;
-    width: 650px;
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
 }
-.sub{
-    color: grey;
-    font-weight: 100;
+.sub {
+  color: grey;
+  font-weight: 100;
 }
