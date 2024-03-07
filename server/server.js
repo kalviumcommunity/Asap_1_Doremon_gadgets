@@ -1,12 +1,16 @@
 const express = require("express");
 const { GadgetsModel } = require("./model/users");
-const app = express();
 const cors = require("cors");
 require("dotenv").config();
-const port = process.env.PUBLIC_PORT || 3000;
 const { router } = require("./routes");
 const { connected } = require("./config/dB");
+
+const app = express();
+const port = process.env.PUBLIC_PORT || 3000;
+
+app.use(express.json());
 app.use(cors());
+app.use(router);
 
 // define the ping route
 app.get("/", (req, res) => {
@@ -25,8 +29,15 @@ app.get("/test", async (req, res) => {
   }
 });
 
-// Using router middleware
-app.use(router);
+app.post("/post", async (req, res) => {
+  try {
+    let ans = await GadgetsModel.create(req.body).then((el) => {
+      res.json(el);
+    });
+  } catch (error) {
+    res.send("Error while posting the data", error);
+  }
+});
 
 //connection
 
