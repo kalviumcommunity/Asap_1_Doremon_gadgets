@@ -12,7 +12,7 @@ function Navbar() {
     <ul>
        <Link to={"/"}> <li>Home</li></Link>
         <li>Gadgets</li>
-        <li>Explore</li>
+        <Link to={"/explore"}><li>Explore</li></Link>
         <Link to={"/form"}><li>Add</li></Link>
     </ul> 
     </div>

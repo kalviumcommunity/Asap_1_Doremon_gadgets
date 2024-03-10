@@ -30,9 +30,11 @@ function Body() {
         <img className="friends" src={friend} alt="" />
       </div>
       <div className="display">
-        {data.map((ele, i) => {
-          return <Card key={i} props={ele} />;
-        })}
+        {data.map((ele, i) => (
+          <div key={i}>
+            <Card {...ele}/>
+            </div>
+        ))}
       </div>
     </>
   );
