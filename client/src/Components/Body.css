@@ -29,11 +29,10 @@
   left: 560px;
 }
 .display {
-  justify-content: center;
-  align-items: center;
-
-  position: absolute;
-  left: 300px;
+ display: grid;
+ grid-template-columns: auto auto auto ;
+ row-gap: 30px;
+ margin-left: 80px;
 }
 .row1 {
   display: grid;

@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import "./Form.css";
 import Navbar from "./Navbar";
 import axios from "axios";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [category, setCategory] = useState("");
   const [des, setDes] = useState("");
   const [img, setImg] = useState("");
+  const navigate = useNavigate();
 
   const PostData = async () => {
     try {
@@ -20,12 +22,11 @@ const Form = () => {
 
       const res = await axios
         .post("http://localhost:3000/post", newGadget)
-        .then((res) => {
-          console.log(res);
-        });
-      console.log("Data posted successfully!", res);
-    } catch (err) {
-      console.error(err);
+        .then((res) => {});
+      console.log("Data posted successfully!");
+      navigate("/");
+    } catch (error) {
+      console.error(error);
     }
   };
 
