@@ -1,17 +1,17 @@
-#card{
+.cards {
   display: grid;
-  grid-template-columns: auto auto auto ;
-  grid-template-rows: auto auto auto ;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
 }
 
 .cards {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 350px;
   border: 2px black solid;
   text-align: center;
   border-radius: 20px;
-  background-color: #7489C9;
+  background-color: #7489c9;
   padding: 0 10px 0 10px;
   margin-bottom: 30px;
 }
@@ -19,29 +19,28 @@
   color: rgb(229, 226, 226);
   font-weight: 100;
 }
-.images{
-margin-left: 50px;
+.images {
+  margin-left: 20px;
 }
-.btns{
+.btns {
   display: flex;
   width: 230px;
   justify-content: space-between;
-  margin-left: 80px;
-
+  margin-left: 65px;
 }
-.update{
+.update {
   width: 100px;
   height: 30px;
   border-radius: 10px;
 }
 
-.delete{
+.delete {
   width: 100px;
   height: 30px;
   border-radius: 10px;
 }
 
-.update:hover, .delete:hover{
-  box-shadow: 2px 2px ;
+.update:hover,
+.delete:hover {
+  box-shadow: 2px 2px;
 }
-

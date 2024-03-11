@@ -9,7 +9,7 @@ const Form = () => {
   const [category, setCategory] = useState("");
   const [des, setDes] = useState("");
   const [img, setImg] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const PostData = async () => {
     try {
@@ -20,17 +20,13 @@ const Form = () => {
         des: des,
       };
 
-    //   console.log(newGadget,"gadget")
-
       const res = await axios
         .post("http://localhost:3000/post", newGadget)
-        .then((res) => {
-            
-        });
-        console.log("Data posted successfully!");
-        navigate("/")
+        .then((res) => {});
+      console.log("Data posted successfully!");
+      navigate("/");
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   };
 

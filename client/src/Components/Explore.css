@@ -1,89 +1,87 @@
-.dorades{
-    position: absolute;
-    width: 800px;
-    top: 260px;
-    left: 650px;
+.dorades {
+  position: absolute;
+  width: 800px;
+  top: 260px;
+  left: 650px;
 }
 
-.dorahead{
-    position: absolute;
-    top: 180px;
-    left: 655px;
+.dorahead {
+  position: absolute;
+  top: 180px;
+  left: 655px;
 }
-.nobdes{
-    position: absolute;
-    top: 830px;
-    width: 800px;
-    left: 650px;
+.nobdes {
+  position: absolute;
+  top: 830px;
+  width: 800px;
+  left: 650px;
 }
-.nobita{
-    margin-top: 100px;
+.nobita {
+  margin-top: 100px;
 }
-.nohead{
-    position: absolute;
-    top: 750px;
-    left: 650px;
+.nohead {
+  position: absolute;
+  top: 750px;
+  left: 650px;
 }
-.shizuka{
-    margin-top: 100px;
+.shizuka {
+  margin-top: 100px;
 }
-.shizhead{
-    position: absolute;
-    top: 200vh;
-    left: 650px;
+.shizhead {
+  position: absolute;
+  top: 200vh;
+  left: 650px;
 }
-.shizdes{
-    position: absolute;
-    top: 210vh;
-    width: 800px;
-    left: 650px;
+.shizdes {
+  position: absolute;
+  top: 210vh;
+  width: 800px;
+  left: 650px;
 }
-.gian{
-    margin-top: 100px;
+.gian {
+  margin-top: 100px;
 }
-.gianhead{
-    position: absolute;
-    top: 290vh;
-    left: 650px;
-}
-
-.giandes{
-    position: absolute;
-    top: 300vh;
-    width: 800px;
-    left: 650px;
-}
-h1{
-    color: #005da1;
-}
-.suneo{
-    margin-top: 100px;
-}
-.suneohead{
-    position: absolute;
-    top: 380vh;
-    left: 650px;
-   
-}
-.suneodes{
-    position: absolute;
-    top: 390vh;
-    width: 800px;
-    left: 650px;
+.gianhead {
+  position: absolute;
+  top: 290vh;
+  left: 650px;
 }
 
-.dorami{
-    margin-top: 100px;
+.giandes {
+  position: absolute;
+  top: 300vh;
+  width: 800px;
+  left: 650px;
+}
+h1 {
+  color: #005da1;
+}
+.suneo {
+  margin-top: 100px;
+}
+.suneohead {
+  position: absolute;
+  top: 380vh;
+  left: 650px;
+}
+.suneodes {
+  position: absolute;
+  top: 390vh;
+  width: 800px;
+  left: 650px;
+}
 
+.dorami {
+  margin-top: 100px;
 }
-.doramihead{
-    position: absolute;
-    top: 475vh;
-    left: 650px;
+.doramihead {
+  position: absolute;
+  top: 475vh;
+  left: 650px;
 }
-.doramides{
-    position: absolute;
-    top: 490vh;
-    width: 800px;
-    left: 650px;
+.doramides {
+  position: absolute;
+  top: 490vh;
+  width: 800px;
+  left: 650px;
 }

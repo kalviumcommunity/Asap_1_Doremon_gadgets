@@ -1,3 +1,4 @@
+// Body.jsx
 import React, { useEffect, useState } from "react";
 import "./Body.css";
 import axios from "axios";
@@ -9,17 +10,15 @@ import Navbar from "./Navbar";
 function Body() {
   const [data, setData] = useState([]);
 
-  const Getdata = () => {
-    useEffect(() => {
-      axios
-        .get("https://asap-1-doremon-gadgets-1.onrender.com/test")
-        .then((res) => {
-          setData(res.data);
-        });
-    }, []);
-  };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
-  Getdata();
+  const fetchData = () => {
+    axios.get("http://localhost:3000/test").then((res) => {
+      setData(res.data);
+    });
+  };
 
   return (
     <>
@@ -31,9 +30,7 @@ function Body() {
       </div>
       <div className="display">
         {data.map((ele, i) => (
-          <div key={i}>
-            <Card {...ele}/>
-            </div>
+          <Card key={i} {...ele} fetchData={fetchData} />
         ))}
       </div>
     </>
