@@ -3,17 +3,21 @@ import React from "react";
 import nav from "../navImg.gif";
 import { Link } from "react-router-dom";
 function Navbar() {
+  const handleLogout = ()=>{
+    document.cookie = `userName=;expires=` + new Date(2000, 0, 1).toUTCString()
+  }
   return (
     <>
       <img className="navImg" src={nav} alt="" />
       <div className="nav">
         <div className="div1">
           <ul>
-            <Link to={"/"}>
+            <Link to={"/login"}>
               {" "}
-              <li>Home</li>
+              <li>Login</li>
             </Link>
-            <li>Gadgets</li>
+            <li onClick={handleLogout}>Logout</li>
+           <Link to={"/"}><li>Home</li></Link> 
             <Link to={"/explore"}>
               <li>Explore</li>
             </Link>
