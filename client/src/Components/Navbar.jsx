@@ -9,11 +9,11 @@ function Navbar() {
       <div className="nav">
         <div className="div1">
           <ul>
-            <Link to={"/"}>
+            <Link to={"/login"}>
               {" "}
-              <li>Home</li>
+              <li>Login</li>
             </Link>
-            <li>Gadgets</li>
+           <Link to={"/"}><li>Home</li></Link> 
             <Link to={"/explore"}>
               <li>Explore</li>
             </Link>
