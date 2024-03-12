@@ -4,6 +4,8 @@ const cors = require("cors");
 require("dotenv").config();
 const { router } = require("./routes");
 const { connected } = require("./config/dB");
+const joi = require("joi")
+const {validateGadget} = require("./model/users")
 
 const app = express();
 const port = process.env.PUBLIC_PORT || 3000;
@@ -31,6 +33,10 @@ app.get("/test", async (req, res) => {
 });
 
 app.post("/post", async (req, res) => {
+  const validation = validateGadget(req.body)
+  if(validation.error){
+    return res.status(400).json({error:validation.error.details[0].message  })
+  }
   try {
     let ans = await GadgetsModel.create(req.body).then((el) => {
       res.json(el);
