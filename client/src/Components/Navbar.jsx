@@ -3,7 +3,7 @@ import React from "react";
 import nav from "../navImg.gif";
 import { Link } from "react-router-dom";
 function Navbar() {
-  console.log( new Date(2000, 0, 1).toUTCString())
+  
   const handleLogout = () => {
     document.cookie = `userName=;expires=` + new Date(2000, 0, 1).toUTCString();
     alert("Logged out successfully")

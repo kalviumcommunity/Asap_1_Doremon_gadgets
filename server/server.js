@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(cors());
 app.use(router);
 
+
 // define the ping route
 app.get("/", (req, res) => {
   res.send("hello");
@@ -50,7 +51,7 @@ app.post("/post", async (req, res) => {
 // Add the DELETE route
 app.delete("/delete/:id", async (req, res) => {
   const { id } = req.params;
-  console.log(id);
+ 
 
   try {
     // Find the gadget by ID and remove it
@@ -69,14 +70,19 @@ app.delete("/delete/:id", async (req, res) => {
 
 
 
-app.post("/auth",(req,res)=>{
-  const userName = req.body.userName
-  const user = {name:userName}
-  const token = jwt.sign(user,process.env.token)
-  res.json({token:token})
+app.post("/auth", async (req, res) => {
+  const userName = req.body.userName;
+  const user = { name: userName };
   
+  try {
+    const token = jwt.sign(user, process.env.TOKEN_SECRET);
+    res.json({ token: token });
+  } catch (error) {
+    console.error("Error while generating token", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
-})
 
 
 // Add an update route
