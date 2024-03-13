@@ -1,32 +1,30 @@
-.loginPage{
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-    align-items: center;
-    margin-left: 400px;
-    margin-top: 100px;
-    height: 200px;
-    border-radius: 20px;
-    background-color:#01A6E6 ;
-
+.loginPage {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  align-items: center;
+  margin-left: 400px;
+  margin-top: 100px;
+  height: 200px;
+  border-radius: 20px;
+  background-color: #01a6e6;
 }
-.page{
-    width: 350px;
-    margin: 20px;
-    height: 23px;
-    border-radius: 10px;
-
+.page {
+  width: 350px;
+  margin: 20px;
+  height: 23px;
+  border-radius: 10px;
 }
 
-.loginBtn{
-    width: 100px;
-    height: 30px;
-    margin-top: 30px;
-    border-radius: 10px;
-    cursor: pointer;
+.loginBtn {
+  width: 100px;
+  height: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-.loginBtn:hover{
-    background-color: #80D3F3;
+.loginBtn:hover {
+  background-color: #80d3f3;
 }
