@@ -8,9 +8,7 @@ const Card = (props) => {
   const handleDelete = () => {
     axios
       .delete(`http://localhost:3000/delete/${props._id}`)
-      .then(
-        
-        (res) => {
+      .then((res) => {
         console.log(res);
         props.fetchData();
       })
