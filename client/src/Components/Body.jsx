@@ -9,34 +9,65 @@ import Navbar from "./Navbar";
 
 function Body() {
   const [data, setData] = useState([]);
+  const [currentUsers, setCurrentUsers] = useState("All");
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+    axios
+      .get("http://localhost:3000/user")
+      .then((res) => {
+        console.log(res.data);
+        setUsers(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [currentUsers]);
 
   const fetchData = () => {
-    axios.get("http://localhost:3000/test").then((res) => {
-      setData(res.data);
-    });
+    axios
+      .get("https://asap-1-doremon-gadgets-2.onrender.com/test")
+      .then((res) => {
+        let filteredData =
+          currentUsers === "All"
+            ? res.data
+            : res.data.filter((ele) => {
+                return ele.user === currentUsers;
+              });
+        setData(filteredData);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   };
 
+  console.log(data , "data")
   return (
     <>
       <Navbar />
       <div>
         <img className="bgImg" src={bg} alt="" />
         <h1 className="head">DOREMON'S GADGETS!</h1>
+        <select name="Usernames" id="drop" onChange={(e)=>{setCurrentUsers(e.target.value)}}>
+          <option value="All">All</option>
+          {users.map((ele, index) => {
+            return (
+              <option key={index} value={ele.user}>
+                {ele.user}
+              </option>
+            );
+          })}
+        </select>
         <img className="friends" src={friend} alt="" />
       </div>
       <div className="display">
-        {data.map((ele, i) => (
+        {data.length == 0 ? "No Data Found" : data.map((ele, i) => (
           <Card key={i} {...ele} fetchData={fetchData} />
         ))}
       </div>
     </>
-
-    
-);
+  );
 }
 
 export default Body;

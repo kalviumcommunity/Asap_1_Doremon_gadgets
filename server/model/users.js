@@ -18,7 +18,15 @@ const gadgetSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  user:{
+    type:String
+  }
 });
+const userSchema = new mongoose.Schema({
+  user : {
+    type:String
+  }
+})
 
 const validateGadget = (gadget) => {
   const schema = Joi.object({
@@ -26,11 +34,12 @@ const validateGadget = (gadget) => {
     category: Joi.string().required(),
     img: Joi.string().required(),
     des: Joi.string().required(),
+    user: Joi.string()
   });
 
   return schema.validate(gadget);
 };
-
+const userModel = mongoose.model("users",userSchema)
 const GadgetsModel = mongoose.model("doremongadget", gadgetSchema);
 
-module.exports = { GadgetsModel, validateGadget };
+module.exports = { GadgetsModel, validateGadget,userModel };

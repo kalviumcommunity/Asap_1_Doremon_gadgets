@@ -40,3 +40,8 @@ li {
   border-radius: 15px;
   margin-top: 15px;
 }
+.div2{
+  display: flex;
+  flex-direction: column;
+}
+
