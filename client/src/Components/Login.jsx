@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Body from "./Body";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ import axios from "axios";
 function Login() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [users,setUsers] = useState("")
   const navigate = useNavigate();
 
   const handleUserNameChange = (event) => {
@@ -31,14 +32,32 @@ function Login() {
     document.cookie =
       `userName=${userName};expires=` + new Date(2030, 0, 1).toUTCString();
       alert("You have Login in successfully!")
-
-      axios.post("http://localhost:3000/auth",{userName})
+      let filteredData = users.filter((el)=>{
+        return el.user === userName
+      })
+      if(filteredData.length > 0){
+        localStorage.setItem("users",userName)
+      }
+      else{
+      axios.post("http://localhost:3000/auth",{userName:userName})
       .then((res)=>{
         // console.log(res.data.token)
         document.cookie =
         `token=${res.data.token};expires=` + new Date(2030, 0, 1).toUTCString();
-      })
+        localStorage.setItem("users",userName)
+      })}
   };
+
+  useEffect(()=>{
+    axios.get("http://localhost:3000/user")
+    .then((res)=>{
+      console.log(res)
+      setUsers(res.data)
+    })
+    .catch((err)=>{
+      console.error(err)
+    })
+  },[])
 
   return (
     <>

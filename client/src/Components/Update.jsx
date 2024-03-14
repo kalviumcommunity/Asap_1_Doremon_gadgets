@@ -11,6 +11,7 @@ function Update(props) {
     des: "",
     category: "",
     image: "",
+    user: localStorage.getItem("users")
   });
 
   const { id } = useParams();

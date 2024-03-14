@@ -8,6 +8,7 @@ function Navbar() {
     document.cookie = `userName=;expires=` + new Date(2000, 0, 1).toUTCString();
     alert("Logged out successfully")
     document.cookie = `token=;expires=` + new Date(2000, 0, 1).toUTCString();
+    window.location.reload()
   };
   return (
     <>
@@ -37,6 +38,7 @@ function Navbar() {
             className="searchBar"
             placeholder="Explore the Gadgets here..."
           />
+         
         </div>
       </div>
     </>

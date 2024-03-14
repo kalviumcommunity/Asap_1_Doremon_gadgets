@@ -18,6 +18,7 @@ const Form = () => {
         category: category,
         img: img,
         des: des,
+        user: localStorage.getItem("users")
       };
 
       const res = await axios

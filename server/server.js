@@ -1,5 +1,5 @@
 const express = require("express");
-const { GadgetsModel } = require("./model/users");
+const { GadgetsModel,userModel } = require("./model/users");
 const cors = require("cors");
 require("dotenv").config();
 const { router } = require("./routes");
@@ -74,11 +74,17 @@ app.post("/auth",(req,res)=>{
   const userName = req.body.userName
   const user = {name:userName}
   const token = jwt.sign(user,process.env.token)
+  userModel.create({user:userName})
+
   res.json({token:token})
   
 
 })
 
+app.get("/user",async(req,res)=>{
+  let ans = await userModel.find({})
+  res.send(ans)
+})
 
 // Add an update route
 app.put("/update/:id", async (req, res) => {
