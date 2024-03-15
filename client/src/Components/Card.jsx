@@ -7,7 +7,7 @@ import axios from "axios";
 const Card = (props) => {
   const handleDelete = () => {
     axios
-      .delete(`https://asap-1-doremon-gadgets-2.onrender.com/delete/${props._id}`)
+      .delete(`https://asap-1-doremon-gadgets-3.onrender.com/delete/${props._id}`)
       .then((res) => {
         console.log(res);
         props.fetchData();

@@ -37,7 +37,7 @@ app.get("/test", async (req, res) => {
 app.post("/post", async (req, res) => {
   const validation = validateGadget(req.body);
   if (validation.error) {
-    return res.status(400).json({ error: validation.error.details[0].message });
+    return res.status(500).json({ error: validation.error.details[0].message });
   }
   try {
     let ans = await GadgetsModel.create(req.body).then((el) => {

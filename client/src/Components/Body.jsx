@@ -15,7 +15,7 @@ function Body() {
   useEffect(() => {
     fetchData();
     axios
-      .get("http://localhost:3000/user")
+      .get("https://asap-1-doremon-gadgets-3.onrender.com/user")
       .then((res) => {
         console.log(res.data);
         setUsers(res.data);
@@ -27,7 +27,7 @@ function Body() {
 
   const fetchData = () => {
     axios
-      .get("https://asap-1-doremon-gadgets-2.onrender.com/test")
+      .get("https://asap-1-doremon-gadgets-3.onrender.com/test")
       .then((res) => {
         let filteredData =
           currentUsers === "All"
