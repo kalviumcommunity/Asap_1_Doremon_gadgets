@@ -8,9 +8,9 @@ function Update(props) {
   const navigate = useNavigate();
   const [gadgetData, setGadgetData] = useState({
     name: "",
-    des: "",
     category: "",
     image: "",
+    des: "",
     user: localStorage.getItem("users")
   });
 
