@@ -38,6 +38,7 @@ app.post("/post", async (req, res) => {
   console.log(req.body)
   const validation = validateGadget(req.body);
   if (validation.error) {
+    console.log(validation.error)
     return res.status(500).json({ error: validation.error.details[0].message });
   }
   try {
