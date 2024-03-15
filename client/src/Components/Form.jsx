@@ -21,11 +21,15 @@ const Form = () => {
         user: localStorage.getItem("users")
       };
 
-      const res = await axios
-        .post("https://asap-1-doremon-gadgets-2.onrender.com/post", newGadget)
-        .then((res) => {});
-      console.log("Data posted successfully!");
-      navigate("/");
+      await axios
+        .post("https://asap-1-doremon-gadgets-3.onrender.com/post", newGadget)
+        .then((res) => {
+          console.log(res)
+          console.log("Data posted successfully!");
+          navigate("/");
+        }).catch((err)=>{
+          console.log(err)
+        })
     } catch (error) {
       console.error(error);
     }
