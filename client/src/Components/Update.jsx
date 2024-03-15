@@ -20,7 +20,7 @@ function Update(props) {
     console.log(gadgetData);
     try {
       axios
-        .put(`http://localhost:3000/update/${id}`, gadgetData)
+        .put(`https://asap-1-doremon-gadgets-2.onrender.com/update/${id}`, gadgetData)
         .then((res) => {
           console.log(res);
         });
