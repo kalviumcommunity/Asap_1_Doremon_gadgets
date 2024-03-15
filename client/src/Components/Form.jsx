@@ -22,7 +22,7 @@ const Form = () => {
       };
 
       const res = await axios
-        .post("http://localhost:3000/post", newGadget)
+        .post("https://asap-1-doremon-gadgets-2.onrender.com/post", newGadget)
         .then((res) => {});
       console.log("Data posted successfully!");
       navigate("/");
